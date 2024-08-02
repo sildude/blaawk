@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Blaawk",
+  "description": "SiteBlocker",
+  "version": "1.0",
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": ["*://*/*"],
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "action": {
+    "default_popup": "options.html",
+    "default_icon": "b.png"
+  }
+}
