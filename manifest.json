@@ -3,12 +3,7 @@
   "name": "Blaawk",
   "description": "Extension to block websites that waste your time. Made for productivity.",
   "version": "1.1",
-  "permissions": [
-    "declarativeNetRequest",
-    "declarativeNetRequestWithHostAccess",
-    "activeTab",
-    "storage"
-  ],
+  "permissions": ["declarativeNetRequest", "storage"],
   "web_accessible_resources": [
     {
       "resources": ["blocked.html"],
