@@ -23,7 +23,10 @@ async function updateRules() {
       const rules = blockedSites.map((site, idx) => ({
         id: idx + 1,
         priority: 1,
-        action: {type: 'redirect', redirect: {extensionPath: '/blocked.html'}},
+        action: {
+          type: 'redirect',
+          redirect: {extensionPath: `/blocked.html?blockedUrl=${site}`},
+        },
         condition: {
           urlFilter: site,
           resourceTypes: ['main_frame'],
