@@ -5,7 +5,7 @@ if (blockedUrl) {
   const decodedUrl = decodeURIComponent(blockedUrl);
 
   chrome.storage.local.get('redirects', (result) => {
-    const redirects = result.redirects;
+    const redirects = result.redirects || [];
 
     let site = redirects.find(
       (redirect) => redirect.originalUrl === decodedUrl
